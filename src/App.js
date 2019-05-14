@@ -1,24 +1,37 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar';
+import ImageCard from './components/imagecard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="App">
+      <Navbar />
+      <div className="container">
+        <p className="title">Load your images here</p>
+        <div className="row">
+          <div className="col s4">
+            <ImageCard title="Front yard" />
+          </div>
+          <div className="col s4">
+            <ImageCard title="Living room" buttonTitle="Upload"/>
+          </div>
+          <div className="col s4">
+            <ImageCard title="Kitchen" buttonTitle="Upload"/>
+          </div>
+          <div className="col s4">
+            <ImageCard title="Patio" buttonTitle="Upload"/>
+          </div>
+          <div className="col s4">
+            <ImageCard title="Bathroom" buttonTitle="Upload"/>
+          </div>
+          <div className="col s4">
+            <ImageCard title="Backyard" buttonTitle="Upload"/>
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }
